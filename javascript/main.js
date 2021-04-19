@@ -26,7 +26,7 @@ blocks.forEach((block, index) => {
   block.classList.add("is-flipped"); // hansael b2a
   setTimeout(() => {
     block.classList.remove("is-flipped");
-  }, 1500);
+  }, 2000);
   block.addEventListener("click", function () {
     flipBlock(block);
   });
