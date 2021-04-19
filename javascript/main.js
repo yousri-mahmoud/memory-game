@@ -10,8 +10,12 @@ myStart.onclick = function () {
   document.querySelector(".start-up").remove();
 };
 // time duration and selcetors we will use
+
 let duration = 1000;
 let blocksContainer = document.querySelector(".memory-game-blocks");
+setTimeout(() => {
+  blocksContainer.classList.add("is-flipped");
+}, duration);
 let blocks = Array.from(blocksContainer.children);
 // arry of 19 .key
 let orderRange = [...Array(blocks.length).keys()];
