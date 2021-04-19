@@ -13,10 +13,9 @@ myStart.onclick = function () {
 
 let duration = 1000;
 let blocksContainer = document.querySelector(".memory-game-blocks");
-setTimeout(() => {
-  blocksContainer.classList.add("is-flipped");
-}, duration);
+
 let blocks = Array.from(blocksContainer.children);
+
 // arry of 19 .key
 let orderRange = [...Array(blocks.length).keys()];
 
@@ -24,13 +23,19 @@ shuffle(orderRange);
 // for each for blocks to make it with random order and event click for each block
 blocks.forEach((block, index) => {
   block.style.order = orderRange[index];
+  block.classList.add("is-flipped"); // hansael b2a
+  setTimeout(() => {
+    block.classList.remove("is-flipped");
+  }, 1500);
   block.addEventListener("click", function () {
     flipBlock(block);
   });
 });
+
 // flip block function
 function flipBlock(selectedBlock) {
   selectedBlock.classList.add("is-flipped");
+
   // filter the flipped
   let allFlippedBlocks = blocks.filter((flippedBlock) =>
     flippedBlock.classList.contains("is-flipped")

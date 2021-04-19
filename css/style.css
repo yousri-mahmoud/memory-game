@@ -134,7 +134,7 @@ body {
   backface-visibility: hidden;
   border: 2px solid rgb(32, 142, 185);
 }
-.memory-game-blocks.is-flipped,
+/* .memory-game-blocks .game-block.rotateall, */
 .memory-game-blocks .game-block.has-match,
 .memory-game-blocks .game-block.is-flipped {
   transform: rotateY(180deg);
