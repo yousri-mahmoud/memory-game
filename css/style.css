@@ -87,6 +87,10 @@ body {
   }
 }
 .memory-game-blocks.no-clicking {
+  -webkit-pointer-events: none;
+  -ms-pointer-events: none;
+  -moz-pointer-events: none;
+  -o-pointer-events: none;
   pointer-events: none;
 }
 .memory-game-blocks {
@@ -153,6 +157,10 @@ body {
   -moz-transform: rotateY(180deg);
   -o-transform: rotateY(180deg);
   transform: rotateY(180deg);
+  -webkit-pointer-events: none;
+  -ms-pointer-events: none;
+  -moz-pointer-events: none;
+  -o-pointer-events: none;
   pointer-events: none;
 }
 
